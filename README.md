@@ -12,7 +12,7 @@ Version 1.0
  Mac - `git clone` this repository into your `.vscode/Extensions` folder located in your Home directory.
  If you do not have git installes you can download the zip of this repository and unzip it to the same location.
 
- Windows -
+ Windows - coming soon
 
  ##Credit
 
