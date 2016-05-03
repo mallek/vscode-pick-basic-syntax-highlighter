@@ -14,7 +14,7 @@ Version 1.0
 
  Windows - coming soon
 
- ##Credit
+##Credit
 
  Thanks for the original work done by Jacob Bennett to get this working for sublime.  This wouldl not be possible without his work.
 
