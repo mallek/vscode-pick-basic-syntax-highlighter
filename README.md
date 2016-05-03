@@ -18,7 +18,7 @@ Version 1.0
 
 ##Credit
 
- Thanks for the original work done by Jacob Bennett to get this working for sublime.  This wouldl not be possible without his work.
+ Thanks for the original work done by Jacob Bennett to get this working for sublime.  This would not be possible without his work.
 
 https://github.com/JacobBennett/sublime-pickbasic
 
