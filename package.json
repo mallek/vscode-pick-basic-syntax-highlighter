@@ -3,7 +3,7 @@
     "displayName": "PickBasic",
     "description": "Pick Basic Syntax Highlighting and language support",
     "version": "1.0.0",
-    "publisher": "travisHaley",
+    "publisher": "TravisHaley",
     "engines": {
         "vscode": "^1.0.0"
     },
