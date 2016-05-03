@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>pick</string>
+	</array>
+	<key>name</key>
+	<string>Pick Basic</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>\*.*</string>
+			<key>name</key>
+			<string>comment.line.asterisk.pick</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.pick</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.pick</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>this will highlight the subroutine keyword and the name of the subroutine seperately</string>
+			<key>match</key>
+			<string>(SUBROUTINE) ([A-Z_-]+)</string>
+			<key>name</key>
+			<string>entity.name.function.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\'[A-Za-z0-9\:\-\_ ]*\'|\"[A-Za-z0-9\:\-\_ ]*\")</string>
+			<key>name</key>
+			<string>string.other.quoted-or-unquoted.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(BEGIN|CASE|DO|ELSE|END|ERROR|FOR|FROM|GO|GOSUB|GOTO|IF|LOOP|NEXT|ON|REPEAT|THEN|TO|UNTIL|WHILE)\b</string>
+			<key>name</key>
+			<string>keyword.control.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(=|&lt;|&gt;|==|!=|\bNE\b|\bAND\b)</string>
+			<key>name</key>
+			<string>keyword.operator.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([0-9]+)\b</string>
+			<key>name</key>
+			<string>constant.numeric.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(@|ABS|ABSS|ADDS|ALPHA|ANDS|ASCII|ASSIGNED|BITCHANGE|BITCHECK|BITRESET|BITSETBYTELEN|CATS|CHANGETIMESTAMP|CHAR|CHARS|CHDIR|CHECKSUM|COL1|COL2|COMPARE|CONVERTCOS|COUNT|COUNTS|DATE|DCOUNT|DECRYPT|DIV|DIVS|DOWNCASE|DQUOTE|DROUND|DTX|DYNTOXMLEBCDIC|ENCRYPT|EQS|EREPLACE|EXIT|EXP|EXTRACT|FIELD|FIELDS|FILEINFO|GES|GETCWDGETENV|GETUSERGROUP|GROUP|ICONV|ICONVS|IFS|INDEX|INMAT|INSERT|INT|ISALPHA|ISALNUMISDIGIT|ISPRINT|ISCNTRL|ISSPACE|ISLOWER|ISUPPER|JBASECOREDUMP|JBASETHREADCreateJBASETHREADStatus|ITYPE|KEYIN|LATIN1|LEFT|LEN|LENS|LENDP|LES|LN|LOCALDATELOCALTIME|LOWCASE|LOWER|MAKETIMESTAMP|MATCHFIELD|MOD|MODS|MULS|NEGS|NES|NOTSNUM|NUMS|OCONV|OCONVS|ORS|PUTENV|PWR|QUOTE|RAISE|RECORDLOCKED|REPLACE|RIGHT|RNDSADD|SDIV|SENTENCE|SEQ|SEQS|SIN|SMUL|SORT|SOUNDEX|SPACE|SPACES|SPLICE|SPOOLERSQRT|SQUOTE|SSUB|STR|STRS|SUM|SWAP|SYSTEM|SUBS|SUBSTRINGS|TAN|TIME|TIMEDATETIMEDIFF|TIMESTAMP|TRANS|TRIM|TRIMB|TRIMBS|TRIMF|TRIMFS|UNASSIGNED|UNIQUEKEYUPCASE|UTF8|XLATE|XMLTODYN|XMLTOXML|XTDJQLCOMPILE|JQLEXECUTE|JQLFETCH|JQLGETPROPERTY|JQLPUTPROPERTY)\b</string>
+			<key>name</key>
+			<string>storage.type.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(ABORT|BEFORE|BREAK|CALL|CALLC|CALLDOTNET|CALLJ|CALLONEXIT|CAPTURING|CHAIN|CHANGE|CLEAR|CLEARCOMMON|CLEARDATA|CLEARFILE|CLEARINPUT|CLEARSELECT|CLOSE|CLOSESEQ|COLLECTDATA|COMMON|CONTINUE|CONVERT|CREATE|CRT|DATA|DEBUG|DEFC|DEFCE|DEFFUN|DEL|DELETE|DELETELIST|DELETESEQ|DELETEU|DIM|DIMENSION|ECHO|ENTER|EQU|EQUATE|EXECUTE|EXIT|FILELOCK|FILEUNLOCK|FIND|FINDSTR|FLUSH|FMT|FMTS|FOLD|FOOTING|FORMAT|FORMLIST|FUNCTION|GET|GETLIST|GETX|HEADING|HEADINGE|HEADINGN|HUSH|IF|IN|INPUT|INPUTNULL|INS|LOCATE|LOCK|MAT|MATBUILD|MATPARSE|MATREAD|MATREADU|MATWRITE|MATWRITEU|MSLEEP|NOBUFF|NULL|OBJEXCALLBACK|OPEN|OPENDEV|OPENPATH|OPENSEQ|OPENSER|OSBREAD|OSBWRITE|OSCLOSE|OSDELETE|OSOPEN|OSREAD|OSWRITE|OUT|PAGE|PAUSE|PASSLIST|PCPERFORM|PERFORM|PRECISION|PRINT|PRINTER|PRINTERR|PROCREAD|PROCWRITE|PROGRAM|PROMPT|READ|READBLK|READL|READLIST|READNEXT|READSELECT|READSEQ|READT|READU|READV|READVL|READVU|READXML|RELEASE|REMOVE|RETURN|RETURNING|REWIND|RQM|RTNDATA|RTNLIST|SEEK|SELECT|SETTING|SEND|SENDX|SLEEP|SSELECT|SSELECTN|SSELECTV|STOP|SUBROUTINE|TIMEOUT|UNLOCK|UDTEXECUTE|WAKE|WEOF|WEOFSEQ|WRITE|WRITEBLK|WRITELIST|WRITESEQ|WRITET|WRITEU|WRITEV|WRITEVU|WRITEXML|LOOP)\b</string>
+			<key>name</key>
+			<string>storage.type.pick</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.pick</string>
+	<key>uuid</key>
+	<string>07c0e103-1d93-44f3-b450-585e4c743cfc</string>
+</dict>
+</plist>

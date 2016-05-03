@@ -1,0 +1,26 @@
+{
+    "name": "pick",
+    "displayName": "PickBasic",
+    "description": "Pick Basic Syntax Highlighting and language support",
+    "version": "1.0.0",
+    "publisher": "travisHaley",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pick",
+            "aliases": ["Pick Basic", "pick"],
+            "extensions": [".txt", ".pick", ""],
+            "configuration": "./pick.configuration.json"
+        }],
+        "grammars": [{
+            "language": "pick",
+            "scopeName": "source.pick",
+            "path": "./syntaxes/pick.tmLanguage"
+        }]
+    }
+}
