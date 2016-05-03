@@ -9,10 +9,12 @@ Version 1.0
 
 ##Installation
 
- Mac - `git clone` this repository into your `.vscode/Extensions` folder located in your Home directory.
- If you do not have git installes you can download the zip of this repository and unzip it to the same location.
+ `git clone` this repository into your `.vscode/Extensions` folder
+ If you do not have git installed you can download the zip of this repository and unzip it to the same location.
 
- Windows - coming soon
+* **Windows** %USERPROFILE%\.vscode\extensions
+* **Mac** ~/.vscode/extensions
+* **Linux** ~/.vscode/extensions
 
 ##Credit
 
