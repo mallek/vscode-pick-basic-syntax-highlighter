@@ -22,5 +22,8 @@
             "scopeName": "source.pick",
             "path": "./syntaxes/pick.tmLanguage"
         }]
+    },
+    "repository": {
+        "url": "https://github.com/mallek/vscode-pick-basic-syntax-highlighter"
     }
 }
