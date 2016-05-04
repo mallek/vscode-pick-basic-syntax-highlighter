@@ -2,10 +2,16 @@
 ## Pick Basic Syntax Highlighter for VS Code
 This simple syntax highlighter uses Jacob Bennett's sublime TextMate pick highlighting and packages it for visual studio code
 
+`Recommended VSCode Theme Monokai` 
+
 Version 1.0
 * Imported TextMate highlighting and packaged for VS Code
 * Updated comment and bracket matching in package.json
 * updated README
+
+Version 1.1
+* Added EQ, LT, GT operators
+* Added bracket matching
 
 ##Installation
 Inside VSCode from the command pallet Install Extension -> PickBasic
