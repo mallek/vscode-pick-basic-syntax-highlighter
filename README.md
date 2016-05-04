@@ -8,7 +8,9 @@ Version 1.0
 * updated README
 
 ##Installation
+Inside VSCode from the command pallet Install Extension -> PickBasic
 
+###- Manual Install
  `git clone` this repository into your `.vscode/Extensions` folder
  If you do not have git installed you can download the zip of this repository and unzip it to the same location.
 

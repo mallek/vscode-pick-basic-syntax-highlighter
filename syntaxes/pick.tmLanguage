@@ -51,7 +51,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(=|&lt;|&gt;|==|!=|\bNE\b|\bAND\b)</string>
+			<string>(=|&lt;|&gt;|==|!=|\bNE\b|\bAND\b|\bEQ\b|\bLT\b|\bGT\b)</string>
 			<key>name</key>
 			<string>keyword.operator.pick</string>
 		</dict>
