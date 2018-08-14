@@ -13,10 +13,10 @@ Version 1.1
 * Added EQ, LT, GT operators
 * Added bracket matching
 
-##Installation
+## Installation
 Inside VSCode from the command pallet Install Extension -> PickBasic
 
-###- Manual Install
+### Manual Install
  `git clone` this repository into your `.vscode/Extensions` folder
  If you do not have git installed you can download the zip of this repository and unzip it to the same location.
 
@@ -24,7 +24,7 @@ Inside VSCode from the command pallet Install Extension -> PickBasic
 * **Mac** ~/.vscode/extensions
 * **Linux** ~/.vscode/extensions
 
-##Credit
+## Credit
 
  Thanks for the original work done by Jacob Bennett to get this working for sublime.  This would not be possible without his work.
 
