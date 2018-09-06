@@ -14,7 +14,7 @@
         "languages": [{
             "id": "pick",
             "aliases": ["Pick Basic", "pick"],
-            "extensions": [".txt", ".pick", ""],
+            "extensions": [".txt", ".pick", ".b", ""],
             "configuration": "./pick.configuration.json"
         }],
         "grammars": [{

@@ -19,7 +19,8 @@
         ["[", "]"],
         ["(", ")"],
         ["\"", "\""],
-        ["'", "'"]
+        ["'", "'"],
+        ["BEGIN CASE", " CASE END CASE"]
     ],
     // symbols that that can be used to surround a selection
     "surroundingPairs": [
