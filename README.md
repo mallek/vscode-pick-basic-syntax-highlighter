@@ -13,6 +13,12 @@ Version 1.1
 * Added EQ, LT, GT operators
 * Added bracket matching
 
+Version 1.1.1
+* Added support for ! comments
+* Updated comment matching to not include * and ! used in strings
+* Added support for Code Folding via !REGION and !ENDREGION (can also use *REGION and *ENDREGION)
+* Added auto closing pairs for region declarations
+
 ## Installation
 Inside VSCode from the command pallet Install Extension -> PickBasic
 
