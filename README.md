@@ -19,6 +19,11 @@ Version 1.1.1
 * Added support for Code Folding via !REGION and !ENDREGION (can also use *REGION and *ENDREGION)
 * Added auto closing pairs for region declarations
 
+Version 1.1.2
+* Added support for SUBROUTINE and CALL SURBOUTINE
+* Highlight lines where control-break logic starts
+* Improve quoted string identification
+
 ## Installation
 Inside VSCode from the command pallet Install Extension -> PickBasic
 
