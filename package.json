@@ -2,7 +2,7 @@
 	"name": "pick",
 	"displayName": "PickBasic",
 	"description": "Pick Basic Syntax Highlighting and language support",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"publisher": "TravisHaley",
 	"engines": {
 		"vscode": "^1.1.0"
