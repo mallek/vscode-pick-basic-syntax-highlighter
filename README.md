@@ -20,7 +20,7 @@ Version 1.1.1
 * Added auto closing pairs for region declarations
 
 Version 1.1.2
-* Added support for SUBROUTINE and CALL SURBOUTINE
+* Added support for SUBROUTINE and CALL SUBROUTINE
 * Highlight lines where control-break logic starts
 * Improve quoted string identification
 
