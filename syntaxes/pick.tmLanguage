@@ -33,13 +33,76 @@
 			<key>comment</key>
 			<string>this will highlight the subroutine keyword and the name of the subroutine seperately</string>
 			<key>match</key>
-			<string>(SUBROUTINE) ([A-Z_-]+)</string>
+			<string>(SUBROUTINE)\s+([A-Z0-9_-]+)</string>
+			<key>name</key>
+			<string>entity.name.function.pick</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.pick</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.pick</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>this will highlight the CALL keyword and the name of the subsequent call seperately</string>
+			<key>match</key>
+			<string>(CALL)\s+([A-Z0-9_\.-]+)</string>
+			<key>name</key>
+			<string>entity.name.function.pick</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.pick</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.pick</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>this will highlight the GOSUB keyword and the subroutine name called</string>
+			<key>match</key>
+			<string>(GOSUB)\s+([A-Z_\.0-9]*)</string>
+			<key>name</key>
+			<string>entity.name.function.pick</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.pick</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.pick</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Highlight lines where control-break logic starts</string>
+			<key>match</key>
+			<string>([A-Z_\.0-9]*)(:)\s*\n</string>
 			<key>name</key>
 			<string>entity.name.function.pick</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\'[A-Za-z0-9\:\-\_ ]*\'|\"[A-Za-z0-9\:\-\_ ]*\")</string>
+			<string>(\'[A-Za-z0-9()@#\=;:,\\\/|.\-\"\_ ]*\'|\"[A-Za-z0-9()@#\=;:,\\\/|.\-\'\_ ]*\")</string>
 			<key>name</key>
 			<string>string.other.quoted-or-unquoted.pick</string>
 		</dict>
@@ -51,7 +114,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(=|&lt;|&gt;|==|!=|\bNE\b|\bAND\b|\bEQ\b|\bLT\b|\bGT\b)</string>
+			<string>(=|&lt;|&gt;|==|!=|\bNE\b|\bAND\b|\bEQ\b|\bLT\b|\bGT\b|:|\+)</string>
 			<key>name</key>
 			<string>keyword.operator.pick</string>
 		</dict>
