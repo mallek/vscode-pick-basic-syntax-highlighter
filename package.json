@@ -14,7 +14,7 @@
 		"languages": [{
 			"id": "pick",
 			"aliases": ["Pick Basic", "pick", "PickBASIC", "D3", "UniVerse", "jBASE", "OpenQM"],
-			"extensions": [".txt", ".pick", ""],
+			"extensions": [".txt", ".pick", ".b", ""],
 			"configuration": "./pick.configuration.json"
 		}],
 		"grammars": [{

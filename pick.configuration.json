@@ -16,7 +16,8 @@
         ["\"", "\""],
         ["'", "'"],
 		["!REGION", "!ENDREGION"],
-		["*REGION", "*ENDREGION"]
+        ["*REGION", "*ENDREGION"],
+        ["BEGIN CASE", " CASE END CASE"]
     ],
     "surroundingPairs": [
         ["<", ">"],
