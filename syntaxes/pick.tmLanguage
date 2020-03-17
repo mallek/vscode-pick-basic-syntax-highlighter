@@ -59,7 +59,7 @@
 			<key>comment</key>
 			<string>Pick Clauses</string>
 			<key>match</key>
-			<string>\b(?i:CAPTURING|DO|END|ELSE|LOCKED|ONERR|ON ERROR|SETTING|THEN|UNTIL|WHILE)\b</string>
+			<string>\b(?i:CAPTURING|DO|ELSE|LOCKED|ONERR|ON ERROR|SETTING|UNTIL|WHILE)\b</string>
 			<key>name</key>
 			<string>keyword.other.pick</string>
 		</dict>
@@ -103,7 +103,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?i:BEGIN CASE|BEGIN WORK|BREAK|COMMIT WORK|CONTINUE|DEBUG|END CASE|CASE|EXIT|FOR|GO|GOSUB|GOTO|GROUP|IF|IFR|IFS|INPUTTRAP OFF|INPUTTRAP|LOOP|NEXT|REPEAT|RETURN|ROLLBACK WORK|SLEEP|STOP|TO|WAKE)\b</string>
+			<string>\b(?i:BEGIN CASE|BEGIN WORK|BREAK|COMMIT WORK|CONTINUE|DEBUG|END|END CASE|CASE|EXIT|FOR|GO|GOSUB|GOTO|GROUP|IF|IFR|IFS|INPUTTRAP OFF|INPUTTRAP|LOOP|NEXT|REPEAT|RETURN|ROLLBACK WORK|SLEEP|STOP|THEN|TO|WAKE)\b</string>
 			<key>name</key>
 			<string>keyword.control.pick</string>
 		</dict>
