@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(^['|"]*|\s)(\!.*|\*.*)</string>
+			<string>((\;|^)\s{0,}\*).*|((\;|^)\s{0,}\!).*|\b(?i:REM)\b.*</string>
 			<key>name</key>
 			<string>comment.line.asterisk.pick</string>
 		</dict>
@@ -31,113 +31,17 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>this will highlight the SUBROUTINE keyword and the name of the subroutine separately</string>
+			<string>Program and Subroutine Highlighting</string>
 			<key>match</key>
-			<string>(SUBROUTINE)\s+([a-zA-Z0-9_-]+)</string>
+			<string>(?i:SUBROUTINE|PROGRAM) ([A-Za-z_-]+)</string>
 			<key>name</key>
 			<string>entity.name.function.pick</string>
 		</dict>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.pick</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.pick</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>this will highlight the CALL keyword and the name of the subsequent call separately</string>
-			<key>match</key>
-			<string>(CALL)\s+([a-zA-Z0-9_\.-]+)</string>
-			<key>name</key>
-			<string>entity.name.function.pick</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.pick</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.pick</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>this will highlight the GOSUB keyword and the subroutine name called</string>
-			<key>match</key>
-			<string>(GOSUB)\s+([a-zA-Z_\.0-9]*)</string>
-			<key>name</key>
-			<string>entity.name.function.pick</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.pick</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.pick</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>this will highlight the GOTO keyword and the subsequent section called</string>
-			<key>match</key>
-			<string>(GOTO)\s+([a-zA-Z_\.0-9]*)</string>
-			<key>name</key>
-			<string>entity.name.function.pick</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.pick</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.pick</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Highlight lines where control-break logic starts</string>
-			<key>match</key>
-			<string>([A-Z_\.0-9]*)(:)\s*\n</string>
-			<key>name</key>
-			<string>entity.name.function.pick</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(\'[A-Za-z0-9()@#\=;:,\\\/|.\-\"\_ ]*\'|\"[A-Za-z0-9()@#\=;:,\\\/|.\-\'\_ ]*\")</string>
-			<key>name</key>
-			<string>string.other.quoted-or-unquoted.pick</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(BEGIN|CASE|DO|ELSE|END|ERROR|FOR|FROM|GO|GOSUB|GOTO|IF|LOOP|NEXT|ON|REPEAT|THEN|TO|UNTIL|WHILE)\b</string>
-			<key>name</key>
-			<string>keyword.control.pick</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(=|&lt;|&gt;|==|!=|\bNE\b|\bAND\b|\bEQ\b|\bLT\b|\bGT\b|:|\+)</string>
-			<key>name</key>
-			<string>keyword.operator.pick</string>
+		    <key>match</key>
+		    <string>^([A-Za-z0-9_\.])+\:|^[0-9\.]+\b|;|,</string>
+	   	    <key>name</key>
+		    <string>entity.name.function.pick</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -147,13 +51,75 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(@|ABS|ABSS|ADDS|ALPHA|ANDS|ASCII|ASSIGNED|BITCHANGE|BITCHECK|BITRESET|BITSETBYTELEN|CATS|CHANGETIMESTAMP|CHAR|CHARS|CHDIR|CHECKSUM|COL1|COL2|COMPARE|CONVERTCOS|COUNT|COUNTS|DATE|DCOUNT|DECRYPT|DIV|DIVS|DOWNCASE|DQUOTE|DROUND|DTX|DYNTOXMLEBCDIC|ENCRYPT|EQS|EREPLACE|EXIT|EXP|EXTRACT|FIELD|FIELDS|FILEINFO|GES|GETCWDGETENV|GETUSERGROUP|GROUP|ICONV|ICONVS|IFS|INDEX|INMAT|INSERT|INT|ISALPHA|ISALNUMISDIGIT|ISPRINT|ISCNTRL|ISSPACE|ISLOWER|ISUPPER|JBASECOREDUMP|JBASETHREADCreateJBASETHREADStatus|ITYPE|KEYIN|LATIN1|LEFT|LEN|LENS|LENDP|LES|LN|LOCALDATELOCALTIME|LOWCASE|LOWER|MAKETIMESTAMP|MATCHFIELD|MOD|MODS|MULS|NEGS|NES|NOTSNUM|NUMS|OCONV|OCONVS|ORS|PUTENV|PWR|QUOTE|RAISE|RECORDLOCKED|REPLACE|RIGHT|RNDSADD|SDIV|SENTENCE|SEQ|SEQS|SIN|SMUL|SORT|SOUNDEX|SPACE|SPACES|SPLICE|SPOOLERSQRT|SQUOTE|SSUB|STR|STRS|SUM|SWAP|SYSTEM|SUBS|SUBSTRINGS|TAN|TIME|TIMEDATETIMEDIFF|TIMESTAMP|TRANS|TRIM|TRIMB|TRIMBS|TRIMF|TRIMFS|UNASSIGNED|UNIQUEKEYUPCASE|UTF8|XLATE|XMLTODYN|XMLTOXML|XTDJQLCOMPILE|JQLEXECUTE|JQLFETCH|JQLGETPROPERTY|JQLPUTPROPERTY)\b</string>
+			<string>(\\(.)+\\|\'(.)+\'|\"(.)+\")</string>
+			<key>name</key>
+			<string>string.other.quoted-or-unquoted.pick</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Pick Clauses</string>
+			<key>match</key>
+			<string>\b(?i:CAPTURING|DO|ELSE|LOCKED|ONERR|ON ERROR|SETTING|UNTIL|WHILE)\b</string>
+			<key>name</key>
+			<string>keyword.other.pick</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Pick Functions 1</string>
+			<key>match</key>
+			<string>\b(?i:@|ABS|ABSS|ADDS|ACCESS|ALPHA|ANDS|ASCII|ASSIGNED|BEFORE|BITCHANGE|BITCHECK|BITRESET|BITSETBYTELEN|CHANGE|CHAR|CHARS|CHDIR|CHECKSUM|COL1|COL2|CONVERT|CONVERTCOS|COS|COUNT|COUNTS|CREATE|DATE|DCOUNT|DECRYPT|DEFC|DEFCE|DEFFUN|DOWNCASE|DQUOTE|DROUND|DTX|DYNTOXMLEBCDIC|EBCDIC|ENCRYPT|EREPLACE|ERROR|EXCHANGE|EXP)\b</string>
 			<key>name</key>
 			<string>storage.type.pick</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(ABORT|BEFORE|BREAK|CALL|CALLC|CALLDOTNET|CALLJ|CALLONEXIT|CAPTURING|CHAIN|CHANGE|CLEAR|CLEARCOMMON|CLEARDATA|CLEARFILE|CLEARINPUT|CLEARSELECT|CLOSE|CLOSESEQ|COLLECTDATA|COMMON|CONTINUE|CONVERT|CREATE|CRT|DATA|DEBUG|DEFC|DEFCE|DEFFUN|DEL|DELETE|DELETELIST|DELETESEQ|DELETEU|DIM|DIMENSION|ECHO|ENTER|EQU|EQUATE|EXECUTE|EXIT|FILELOCK|FILEUNLOCK|FIND|FINDSTR|FLUSH|FMT|FMTS|FOLD|FOOTING|FORMAT|FORMLIST|FUNCTION|GET|GETLIST|GETX|HEADING|HEADINGE|HEADINGN|HUSH|IF|IN|INPUT|INPUTNULL|INS|LOCATE|LOCK|MAT|MATBUILD|MATPARSE|MATREAD|MATREADU|MATWRITE|MATWRITEU|MSLEEP|NOBUFF|NULL|OBJEXCALLBACK|OPEN|OPENDEV|OPENPATH|OPENSEQ|OPENSER|OSBREAD|OSBWRITE|OSCLOSE|OSDELETE|OSOPEN|OSREAD|OSWRITE|OUT|PAGE|PAUSE|PASSLIST|PCPERFORM|PERFORM|PRECISION|PRINT|PRINTER|PRINTERR|PROCREAD|PROCWRITE|PROGRAM|PROMPT|READ|READBLK|READL|READLIST|READNEXT|READSELECT|READSEQ|READT|READU|READV|READVL|READVU|READXML|RELEASE|REMOVE|RETURN|RETURNING|REWIND|RQM|RTNDATA|RTNLIST|SEEK|SELECT|SETTING|SEND|SENDX|SLEEP|SSELECT|SSELECTN|SSELECTV|STOP|SUBROUTINE|TIMEOUT|UNLOCK|UDTEXECUTE|WAKE|WEOF|WEOFSEQ|WRITE|WRITEBLK|WRITELIST|WRITESEQ|WRITET|WRITEU|WRITEV|WRITEVU|WRITEXML|LOOP)\b</string>
+			<string>\b(?i:EXTRACT|FIELD|FIELDS|FMT|FMTS|FOLD|GETCWD|GETENV|GETLIST|ICONV|ICONVS|INDEX|INMAT|INSERT|INT|ISALNUMISDIGIT|ISALPHA|ISCNTRL|ISLOWER|ISPRINT|ISSPACE|ISUPPER|ITYPE|JBASECOREDUMP|JBASETHREADCreate|JBASETHREADStatus|JQLEXECUTE|JQLCOMPILE|JQLFETCH|JQLGETPROPERTY|JQLPUTPROPERTY|LATIN1|LEFT|LEN|LENDP|LENS|LN|LOCALDATE|LOCALTIM|LOCATE|LOWCASE|LOWER|MAKETIMESTAMP|MAXIMUM|MINIMUM|MOD|MODS|NOT|NUM|OCCURS|OCONV|OCONVS|PWR|REM|REPLACE|RND|SCAN|SENTENCE)\b</string>
+			<key>name</key>
+			<string>storage.type.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(?i:SEQ|SEQS|SIN|SORT|SOUNDEX|SPACE|SPACES|SQRT|SQUOTE|STATUS|STR|SUM|SUMMATION|SWAP|SYSTEM|TAN|TIME|TIMEDATE|TIMEDIFF|TIMEOUT|TIMESTAMP|TRIM|TRIMB|TRIMBS|TRIMF|TRIMFS|UNASSIGNED|UNIQUEKEY|UPCASE|UTF8|XLATE|XMLTODYN|XMLTOXML|XTD)\b</string>
+			<key>name</key>
+			<string>storage.type.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>((\!|\#|&amp;|\*=|\+=|\\=|\^|-=|\/=|:|:=|&lt;=|&lt;&gt;|&gt;=|&gt;|&lt;|=|\+|-|\\|\/|\*)|\b(?i:AND|CAT|DIV|DIVD|DIVS|EQ|EQU|EQS|GE|GES|GT|LE|LES|LT|MATCH|MATCHFIELD|NE|NEGS|NES|OR|SMUL)\b)</string>
+			<key>name</key>
+			<string>keyword.operator.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(?i:ABORT|AUX|CASING|CATS|CHANGETIMESTAMP|CLEAR|CLEARDATA|CLEARFILE|CLEARINPUT|CLEARSELECT|COMPARE|CONVERT|CRT|DATA|DEL|DELETE|ECHO|EQUATE|ERROR|FIND|FINDSTR|FLUSH|FOOTING|FORMAT|FORMLIST|FUNCTION|GET|GETX|GETUSERGROUP|HEADING|HEADINGE|HEADINGN|HUSH|IN|INPUT|INPUTCLEAR|INPUTCTRL|INPUTERR|INPUTNULL|INPUTPARITY|INS|KEY|KEYIN|LET|LOCATE|MAT|MATBUILD|MATPARSE|NULL|OUT|PAGE|PRECISION|PRINT ON|PRINTCHAR|PRINTER|PRINT|PROCREAD|PROCWRITE|PROMPT|REMOVE|REPLACE|REWIND|ROOT|RQM|SEND|SENDX|SPOOLQ|TA|TCL|TCLREAD)\b</string>
+			<key>name</key>
+			<string>support.function.pick</string>		
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(?i:\$INCLUDE|\$OPTIONS|CFUNCTION|CLEARCOMMON|COMMON|COLLECTDATA|DIM|DIMENSION|INCLUDE)\b</string>
+			<key>name</key>
+			<string>support.type.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(?i:BEGIN CASE|BEGIN WORK|BREAK|COMMIT WORK|CONTINUE|DEBUG|END|END CASE|CASE|EXIT|FOR|GO|GOSUB|GOTO|GROUP|IF|IFR|IFS|INPUTTRAP OFF|INPUTTRAP|LOOP|NEXT|REPEAT|RETURN|ROLLBACK WORK|SLEEP|STOP|THEN|TO|WAKE)\b</string>
+			<key>name</key>
+			<string>keyword.control.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(?i:TRANSACTION|TRANSACTION ABORT|TRANSACTION CACHE|TRANSACTION COMMIT|TRANSACTION FLUSH|TRANSACTION ROLLBACK|TRANSACTION START)\b</string>
+			<key>name</key>
+			<string>storage.type.pick</string>
+			<key>match</key>
+			<string>\b(?i:\$CHAIN|CALL|CALLC|CALLDOTNET|CALLJ|CALLONEXIT|CHAIN|ENTER|EXECUTE|UDTEXECUTE)\b</string>
+			<key>name</key>
+			<string>support.class.pick</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(?i:CLOSE|CLOSESEQ|DELETELIST|DELETESEQ|DELETEU|FILE|FILEINFO|FILELOCK|FILEUNLOCK|FROM|GETLIST|LOCK|MATREAD|MATREADU|MATWRITE|MATWRITEU|ON|OPEN|RELEASE|READ|READNEXT|READT|READTX|READV|SELECT|UNLOCK|WEOF|WEOFSEQ|WRITE|WRITEBLK|WRITELIST|WRITESEQ|WRITET|WRITEU|WRITEV|WRITEVU|WRITEX|WRITEXML)\b</string>
 			<key>name</key>
 			<string>storage.type.pick</string>
 		</dict>
@@ -161,6 +127,6 @@
 	<key>scopeName</key>
 	<string>source.pick</string>
 	<key>uuid</key>
-	<string>07c0e103-1d93-44f3-b450-585e4c743cfc</string>
+	<string>04e68b59-5469-4f66-aaf2-edeb0cfcb8bc</string>
 </dict>
 </plist>
